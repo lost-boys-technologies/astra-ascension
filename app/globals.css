@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #001330;
+  --color-surface: #0d1f3c;
+  --color-primary: #00e5ff;
+  --color-primary-dim: #00daf3;
+  --color-magenta: #FF2D9A;
+  --color-secondary: #2792ff;
+  --color-on-surface: #d7e2ff;
+  --color-on-surface-muted: #bac9cc;
+
+  --font-display: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  --font-body: var(--font-inter), "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #001330;
+  color: #d7e2ff;
+  font-family: var(--font-inter), "Inter", sans-serif;
+}
+
+/* Custom utilities */
+.glass-glow {
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+.scanline {
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 229, 255, 0.05) 50%
+  );
+  background-size: 100% 4px;
+}
+
+.parallelogram {
+  clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    color: #ffffff;
+    text-shadow: none;
+  }
+  50% {
+    color: #ff2d9a;
+    text-shadow: 0 0 20px rgba(255, 45, 154, 1), 0 0 50px rgba(255, 45, 154, 0.7),
+      0 0 90px rgba(255, 45, 154, 0.3);
+  }
+}
+
+.text-glow-pulse {
+  animation: glow-pulse 1.4s ease-in-out infinite;
+}
