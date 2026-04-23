@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const HERO_IMAGE =
-  "https://res.cloudinary.com/dqlpq0s6t/image/upload/v1776905112/astra%20ascension/astra_circuit_pqlkc5.png";
+  "https://res.cloudinary.com/dqlpq0s6t/image/upload/v1776972868/astra%20ascension/astra_circuit_2_f9zwar.png";
 
 export default function Hero() {
   return (
